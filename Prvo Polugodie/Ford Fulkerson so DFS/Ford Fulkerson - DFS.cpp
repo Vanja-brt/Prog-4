@@ -6,7 +6,7 @@ int dfs(int u, int t, int flow, vector<vector<int>>& cap, vector<bool>& visited)
     visited[u] = true;
 
     int n = cap.size();
-    for (int v = 0; v < n; ++v) {
+    for (int v = 0; v < n; v++) {
         if (!visited[v] && cap[u][v] > 0) {
             int pushed = dfs(v, t, min(flow, cap[u][v]), cap, visited);
             if (pushed > 0) {

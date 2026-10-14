@@ -32,14 +32,25 @@ long long fordFulkerson(vector<vector<int>> cap, int s, int t) {
 }
 
 int main() {
-    vector<vector<int>> cap = {
-        {0, 16, 13,  0,  0,  0},
-        {0,  0,  0, 12,  0,  0},
-        {0,  4,  0,  0, 14,  0},
-        {0,  0,  9,  0,  0, 20},
-        {0,  0,  0,  7,  0,  4},
-        {0,  0,  0,  0,  0,  0}
+    vector<vector<int>> cap1 = {
+        {0, 8, 8,  0},
+        {0,  0,  0, 8},
+        {0,  1,  0,  8},
+        {0,  0,  0,  0}
     };
-    int s = 0, t = 5;
-    cout << fordFulkerson(cap, s, t) << '\n';
+    int s = 0, t = 3;
+    cout << fordFulkerson(cap1, s, t) << '\n';
+    vector<vector<int>> cap2 = {
+        {0, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 0, 1, 1, 1, 0},
+        {0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0, 0, 0, 0}
+    };
+    s=0;
+    t=7;
+    cout << fordFulkerson(cap2, s, t) << '\n';
 }
